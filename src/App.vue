@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="app-header">
-      <n-layout>
+      <n-layout id="app-header-nav">
         <n-layout-header>
           <a href="/" id="brand-link" class="brand-link"> ChatBoard </a>
           <n-menu mode="horizontal" :options="menuOptions"/>
@@ -58,11 +58,17 @@ export default defineComponent({
 
 #app-header {
   width: 100%;
-  height: 40px;
+  height: 43px;
   display: grid;
   overflow: hidden;
-  padding: 8px 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #e7e7e7;
+}
+
+#app-header-nav{
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .brand-link {
