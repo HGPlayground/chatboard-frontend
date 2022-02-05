@@ -19,7 +19,7 @@
 <script>
 import {defineComponent, ref} from 'vue'
 import {useMessage} from 'naive-ui'
-export default defineComponent("Home", {
+export default defineComponent({name: "Home"}, {
   setup() {
     const formRef = ref(null)
     const message = useMessage()
