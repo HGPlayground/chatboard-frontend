@@ -17,9 +17,10 @@
 </template>
 
 <script>
-import {defineComponent, ref} from 'vue'
+import {ref} from 'vue'
 import {useMessage} from 'naive-ui'
-export default defineComponent({name: "Home"}, {
+export default {
+  name: 'Home',
   setup() {
     const formRef = ref(null)
     const message = useMessage()
@@ -27,7 +28,7 @@ export default defineComponent({name: "Home"}, {
       formRef,
       size: ref('medium'),
       formValue: ref({
-        content: ''
+        content: 'hi'
       }),
       rules: {
         content: {
@@ -47,7 +48,7 @@ export default defineComponent({name: "Home"}, {
       }
     }
   }
-})
+}
 </script>
 
 <style scoped>
