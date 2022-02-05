@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>匿名板</h1>
-    <n-form inline :label-width="80" :model="formValue" :rules="rules" :size="size" ref="formRef">
+    <h1>匿名板3</h1>
+    <n-form :label-width="80" :model="formValue" :rules="rules" :size="size" ref="formRef">
       <n-form-item label="说什么吧：" path="formValue:content">
         <n-input v-model="formValue.content" placeholder="很久很久以前..."/>
       </n-form-item>
@@ -19,9 +19,7 @@
 <script>
 import {defineComponent, ref} from 'vue'
 import {useMessage} from 'naive-ui'
-
-export default defineComponent({
-  name: 'Home',
+export default defineComponent("Home", {
   setup() {
     const formRef = ref(null)
     const message = useMessage()
@@ -32,11 +30,11 @@ export default defineComponent({
         content: ''
       }),
       rules: {
-          content: {
-            required: true,
-            trigger: ['input']
-          }
-        },
+        content: {
+          required: true,
+          trigger: ['input']
+        }
+      },
       handleValidateClick() {
         formRef.value.validate((errors) => {
           if (!errors) {
